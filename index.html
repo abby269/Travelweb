@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Tour - Your Adventure Awaits</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>TravelEscape</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal" style="display:none;">
+        <div class="auth-modal-content">
+            <span class="auth-modal-close">&times;</span>
+            <h2 class="auth-modal-title">Login</h2>
+            <form class="auth-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="auth-modal-switch">
+                <span>Don't have an account? <a href="#" class="switch-to-signup">Sign Up</a></span>
+                <span style="display:none;">Already have an account? <a href="#" class="switch-to-login">Login</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Explore the world's most beautiful destinations</p>
+            <div class="search-box">
+                <input type="text" placeholder="Where do you want to go?">
+                <button>Search</button>
+            </div>
+            <div class="search-results-dropdown" style="display:none;"></div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section id="destinations" class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="slider-container">
+            <button class="slider-arrow left" id="dest-left">&#8592;</button>
+            <div class="slider-track destination-grid"></div>
+            <button class="slider-arrow right" id="dest-right">&#8594;</button>
+        </div>
+    </section>
+
+    <!-- Featured Tours -->
+    <section id="tours" class="tours">
+        <h2>Featured Tours</h2>
+        <div class="slider-container">
+            <button class="slider-arrow left" id="tour-left">&#8592;</button>
+            <div class="slider-track tour-grid"></div>
+            <button class="slider-arrow right" id="tour-right">&#8594;</button>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Travelers Say</h2>
+        <div class="testimonial-slider">
+            <!-- Testimonials will be dynamically added here -->
+        </div>
+        <form class="review-form" style="display:none;">
+            <h3>Leave a Review</h3>
+            <select name="rating" required>
+                <option value="">Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Terrible</option>
+            </select>
+            <textarea name="text" placeholder="Your Review" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+        <div class="review-signin-message">Please sign in to leave a review.</div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="about-us">
+      <h2>About Us</h2>
+      <p>Travel is more than just visiting new places — it's about experiencing cultures, creating memories, and discovering something new about the world and yourself.</p>
+
+      <p>This travel platform is designed to help you explore the globe with ease and confidence. From tropical getaways to cultural landmarks and thrilling adventures, we offer curated travel experiences to suit every taste and budget.</p>
+
+      <p>Whether you're planning a solo journey, a romantic escape, or a family holiday, our goal is to make your trip smooth, enjoyable, and unforgettable. We believe in personalized service, trusted guidance, and unforgettable experiences — wherever your journey takes you.</p>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest travel deals and updates</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your trusted travel companion for unforgettable adventures.</p>
+            </div> -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@travelescape.com</p>
+                <p>Phone: +251 xxxxxxxxx</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TravelEscape. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="booking-modal-overlay" style="display:none;">
+      <div class="booking-modal-content">
+        <span class="booking-modal-close" onclick="closeModal()">&times;</span>
+        <h2>Book Your Trip</h2>
+        <form id="booking-form" onsubmit="submitBooking(event)">
+          <label for="modal-name">Full Name</label>
+          <input type="text" id="modal-name" name="name" required>
+          <label for="modal-email">Email Address</label>
+          <input type="email" id="modal-email" name="email" required>
+          <label for="modal-phone">Phone Number</label>
+          <input type="tel" id="modal-phone" name="phone" required>
+          <label for="modal-travelers">Number of Travelers</label>
+          <input type="number" id="modal-travelers" name="travelers" min="1" value="1" required>
+          <label for="modal-date">Preferred Travel Date</label>
+          <input type="date" id="modal-date" name="date" required>
+          <button type="submit">Submit Booking</button>
+        </form>
+        <div id="booking-success" class="booking-success-message" style="display:none;">Thank you! Your booking request has been received. We'll contact you shortly to confirm availability and payment details.</div>
+      </div>
+    </div>
+
+    <script src="js/images.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
